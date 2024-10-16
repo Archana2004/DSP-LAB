@@ -1,0 +1,13 @@
+clc;
+close all;
+clear all;
+x = [1 2 3 4];
+h = [1 1 1 ];
+y=conv(x,h);
+l=length(x);
+m=length(h);
+n=max(l,m);
+r1=y(1:n);
+r2=[y(n+1:end) zeros(1:length(y)-n)];
+r=r1+r2;
+disp(r);
